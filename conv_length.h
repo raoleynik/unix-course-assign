@@ -15,6 +15,9 @@ public:
     explicit Conv_Length(QWidget *parent = nullptr);
     ~Conv_Length();
 
+private slots:
+
+
 private:
     Ui::Conv_Length *ui;
 };
