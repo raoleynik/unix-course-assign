@@ -14,9 +14,16 @@ class conv_temp : public QWidget
 public:
     explicit conv_temp(QWidget *parent = nullptr);
     ~conv_temp();
+signals:
+    void thirdWindow();
 
 private slots:
 
+    void on_temp_exit_clicked();
+
+    void on_t_return_clicked();
+
+    void on_t_convert_clicked();
 
 private:
     Ui::conv_temp *ui;
