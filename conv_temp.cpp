@@ -10,6 +10,8 @@ conv_temp::conv_temp(QWidget *parent) :
     ui(new Ui::conv_temp)
 {
     ui->setupUi(this);
+    ui->LV1->setCurrentRow(1);
+    ui->LV2->setCurrentRow(1);
     QListWidgetItem *lv1item1 = new QListWidgetItem("Цельсий");
     ui->LV1->addItem(lv1item1);
     QListWidgetItem *lv1item2 = new QListWidgetItem("Кельвин");
@@ -49,8 +51,6 @@ void conv_temp::on_t_convert_clicked()
     QString first = ui->LV1->currentItem()->text();
     QString second = ui->LV2->currentItem()->text();
     QString s_input_value = ui->lineEdit->text();
-    ui->LV1->setCurrentRow(1);
-    ui->LV2->setCurrentRow(1);
     if (s_input_value.contains(".")){
         s_input_value.replace(",",".");
     }

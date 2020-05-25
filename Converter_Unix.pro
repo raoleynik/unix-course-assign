@@ -17,15 +17,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     conv_length.cpp \
+    conv_mass.cpp \
+    conv_temp.cpp \
+    conv_time.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     conv_length.h \
+    conv_mass.h \
+    conv_temp.h \
+    conv_time.h \
     mainwindow.h
 
 FORMS += \
     conv_length.ui \
+    conv_mass.ui \
+    conv_temp.ui \
+    conv_time.ui \
     mainwindow.ui
 
 # Default rules for deployment.

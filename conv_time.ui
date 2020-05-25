@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>conv_mass</class>
- <widget class="QWidget" name="conv_mass">
+ <class>conv_time</class>
+ <widget class="QWidget" name="conv_time">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,11 +25,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="mass_exit">
+  <widget class="QPushButton" name="time_exit">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>320</y>
+     <x>90</x>
+     <y>310</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -59,11 +59,11 @@ QPushButton:pressed {
     <string>Выход</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="m_convert">
+  <widget class="QPushButton" name="t2_convert">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>260</y>
+     <x>120</x>
+     <y>250</y>
      <width>130</width>
      <height>24</height>
     </rect>
@@ -102,8 +102,8 @@ QPushButton:pressed {
   <widget class="QLabel" name="result">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>160</y>
+     <x>210</x>
+     <y>150</y>
      <width>121</width>
      <height>21</height>
     </rect>
@@ -129,28 +129,18 @@ QPushButton:pressed {
   <widget class="QListWidget" name="LV2">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>40</y>
-     <width>121</width>
-     <height>101</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListWidget" name="LV1">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>40</y>
-     <width>121</width>
-     <height>101</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="m_return">
-   <property name="geometry">
-    <rect>
      <x>210</x>
-     <y>320</y>
+     <y>30</y>
+     <width>121</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="t2_return">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>310</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -180,11 +170,21 @@ QPushButton:pressed {
     <string>Назад</string>
    </property>
   </widget>
+  <widget class="QListWidget" name="LV1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>121</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>160</y>
+     <x>30</x>
+     <y>150</y>
      <width>121</width>
      <height>21</height>
     </rect>

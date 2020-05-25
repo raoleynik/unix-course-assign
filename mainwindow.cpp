@@ -9,6 +9,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    lwindow = new Conv_Length();
+    connect(lwindow, &Conv_Length::firstWindow, this, &MainWindow::show);
+    mwindow = new conv_mass();
+    connect(mwindow, &conv_mass::secondWindow,this,&MainWindow::show);
+    twindow =new conv_temp();
+    connect(twindow,&conv_temp::thirdWindow,this,&MainWindow::show);
+    t2window = new conv_time();
+    connect(t2window,&conv_time::fourthWindow,this,&MainWindow::show);
 }
 
 MainWindow::~MainWindow()
@@ -28,7 +36,6 @@ void MainWindow::on_PushButton_exit_clicked()
 void MainWindow::on_PushButton_Conv_Length_Open_clicked()
 {
     hide();
-    lwindow = new Conv_Length();
     lwindow->show();
 
 }
@@ -36,21 +43,18 @@ void MainWindow::on_PushButton_Conv_Length_Open_clicked()
 void MainWindow::on_PushButton_Conv_Temp_Open_clicked()
 {
     hide();
-    twindow = new conv_temp();
     twindow->show();
 }
 // Переход в конвертер массы
 void MainWindow::on_PushButton_Conv_Mass_Open_clicked()
 {
     hide();
-    mwindow = new conv_mass();
     mwindow->show();
 }
-//Переход в конвертер объёма
-void MainWindow::on_PushButton_Conv_Volume_Open_clicked()
+//Переход в конвертер времени
+
+void MainWindow::on_PushButton_Conv_Time_Open_clicked()
 {
     hide();
-    vwindow = new conv_volume();
-    vwindow->show();
+    t2window->show();
 }
-

@@ -11,6 +11,8 @@ Conv_Length::Conv_Length(QWidget *parent) :
     ui(new Ui::Conv_Length)
 {
     ui->setupUi(this);
+    ui->LV1->setCurrentRow(1);
+    ui->LV2->setCurrentRow(1);
     QListWidgetItem *lv1item1 = new QListWidgetItem("Километр");
     ui->LV1->addItem(lv1item1);
     QListWidgetItem *lv1item2 = new QListWidgetItem("Метр");
@@ -21,7 +23,6 @@ Conv_Length::Conv_Length(QWidget *parent) :
     ui->LV1->addItem(lv1item4);
     QListWidgetItem *lv1item5 = new QListWidgetItem("Фут");
     ui->LV1->addItem(lv1item5);
-
     QListWidgetItem *lv2item1 = new QListWidgetItem("Километр");
     ui->LV2->addItem(lv2item1);
     QListWidgetItem *lv2item2 = new QListWidgetItem("Метр");
@@ -59,8 +60,6 @@ void Conv_Length::on_l_convert_clicked()
     QString first = ui->LV1->currentItem()->text();
     QString second = ui->LV2->currentItem()->text();
     QString s_input_value = ui->lineEdit->text();
-    ui->LV1->setCurrentRow(1);
-    ui->LV2->setCurrentRow(1);
     if (s_input_value.contains(".")){
         s_input_value.replace(",",".");
     }
