@@ -14,9 +14,16 @@ class Conv_Length : public QWidget
 public:
     explicit Conv_Length(QWidget *parent = nullptr);
     ~Conv_Length();
-
+signals:
+    void firstWindow();
 private slots:
 
+
+    void on_length_exit_clicked();
+
+    void on_l_return_clicked();
+
+    void on_l_convert_clicked();
 
 private:
     Ui::Conv_Length *ui;
